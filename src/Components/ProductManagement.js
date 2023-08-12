@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ProductManagement() {
-  const [formData, setFormData] = useState({
-    department: '',
-    name: '',
-    // ... other form fields
-  });
+ function ProductManagement() {
+//   const [formData, setFormData] = useState({
+//     department: '',
+//     name: '',
+//     // ... other form fields
+//   });
 
   const history = useNavigate();
 
@@ -25,6 +25,6 @@ function ProductManagement() {
       </form>
     </div>
   );
-}
+  }
 
 export default ProductManagement;
