@@ -5,6 +5,7 @@ import {inventoryData} from '../Constant/const';
 const Dashboard = () => {
 
     const[data,setData]=useState(inventoryData);
+    
 
    const totalStock = data.reduce((acc,curr)=>{
 acc = acc + curr.stock;
@@ -32,6 +33,7 @@ const totalDelivered = data.reduce((acc,curr)=>{
         
         <h1 style={{display:"block"}}>Total Delivered</h1>
       <h3 style={{display:"flex",justifyContent:"center"}} >{totalDelivered}</h3>
+      {setData}
         </div>
 
       <div className="card-container">

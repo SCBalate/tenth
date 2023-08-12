@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import {inventoryData} from '../Constant/const';
 
 function ProductListPage() {
-  const { department } = useParams();
+  // const { department } = useParams();
   const [lowStockFilter, setLowStockFilter] = useState(false);
 
   const filteredProducts = inventoryData.filter(
