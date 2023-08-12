@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { inventoryData } from '../Constant/const';
+import "./style.css"
 
 function DepartmentsPage() {
   const departmentsMap = new Map();
@@ -16,9 +17,14 @@ function DepartmentsPage() {
   return (
     <div className="departments">
       {uniqueDepartments.map(item => (
+<>
+<div className="card-container">
         <Link to={`/products/${item.department}`} key={item.id}>
           <div className="department-card">{item.department}</div>
         </Link>
+        </div>
+        </>
+
       ))}
     </div>
   );

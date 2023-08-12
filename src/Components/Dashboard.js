@@ -22,10 +22,27 @@ const totalDelivered = data.reduce((acc,curr)=>{
  const numberOfItemsWithLowStock = itemsWithLowStock.length;
 
   return (
-    <div>
-        <div>{numberOfItemsWithLowStock}</div>
-        <div>{totalStock} stock;</div>
-        <div>{totalDelivered} stock;</div>
+    <div className='dashboard-items'>
+      <div className="card-container">
+        <h1 style={{display:"block"}}>Total Stock</h1>
+      <h3 style={{display:"flex",justifyContent:"center"}} >{totalStock}</h3>
+        </div>
+
+        <div className="card-container">
+        
+        <h1 style={{display:"block"}}>Total Delivered</h1>
+      <h3 style={{display:"flex",justifyContent:"center"}} >{totalDelivered}</h3>
+        </div>
+
+      <div className="card-container">
+      <h1 style={{display:"block"}}> Low Stocks Items</h1>
+      <h3 style={{display:"flex",justifyContent:"center"}} >{numberOfItemsWithLowStock}</h3>
+      </div>
+       
+        
+        
+       
+       
         
     </div>
   )
